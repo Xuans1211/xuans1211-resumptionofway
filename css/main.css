@@ -1,6 +1,6 @@
 #leadpage{
     height:100vh;
-    background-image: url(assets/banner.JPG);
+    background-image: url(../assets/banner.JPG);
 
     background-repeat: no-repeat; 
 
@@ -20,7 +20,7 @@
 
 #textadv{
     height:500vh;
-    background-image: url(assets/counter.jpg);
+    background-image: url(../assets/counter.jpg);
     background-attachment: fixed; 
     background-attachment: fixed;
     background-size: cover;
