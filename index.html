@@ -7,16 +7,63 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <title>暫停鍵之後──顛跛的復學路</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div id="leadpage">
+     
+    </div>
+    
+    <div id="textadv">
+      <div class="txwrapper" >
+      <div class="tx txon" data-opa="0.8">text1</div></div>
+      <div class="txwrapper" >
+      <div class="tx txdown" data-opa="0.8">text2</div></div>
+      <div id="navi"></div>
+    </div>
+    <div id="analtics"></div>
+    <div id="solution"></div>
+    <div id="footer"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+        $(window).scroll(function(){
+          var scrolled = $(window).scrollTop();
+          var txw_top = $(".txwrapper").offset().top;
+          var txw_h = $(".txwrapper").height();
+          var txw_down = txw_h+ txw_top;
+          console.log(scrolled);
+          $(".tx").each(function(){
+          if(scrolled> txw_top && scrolled < txw_down ){
+            $(this).css('opacity',$(this).data('opa'));
+            $(this).css('position','fixed');
+          }
+          if(scrolled> txw_down ){
+            $(this).css('opacity',0);
+            $(this).css('position','absolute');
+          }
+          if(scrolled < txw_top ){
+            $(this).css('opacity',0);
+            $(this).css('position','absolute');
+          }
+          
+         
+
+
+          });
+        });
+
+
+      });
+
+
+
+    </script>
   </body>
 </html>

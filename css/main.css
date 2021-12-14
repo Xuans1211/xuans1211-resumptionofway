@@ -1,0 +1,50 @@
+#leadpage{
+    height:100vh;
+    background-image: url(/assets/banner.JPG);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-attachment: fixed; */
+}
+
+#navi{
+    width:35px;
+    top:10vh;
+    height:80vh;
+    position: fixed;
+    background-color: brown;
+}
+
+#textadv{
+    height:500vh;
+    background-image: url(/assets/counter.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.txwrapper{
+    height:200vh;
+    background-color: aquamarine;opacity: 0.4;
+    position: relative;
+}
+
+.txon{
+    height:200px;
+    width: 800px;
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    top:12vh;
+    left:10vh;
+}
+
+.txdown{
+    height:200px;
+    width: 800px;
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    bottom:12vh;
+    right:10vh;
+}
