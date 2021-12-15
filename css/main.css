@@ -1,6 +1,6 @@
 #leadpage{
     height:100vh;
-    background-image: url(./assets/banner.JPG);
+    background-image: url("./assets/banner.JPG");
     background-repeat: no-repeat; 
     background-size: 100% 100%; 
 }
