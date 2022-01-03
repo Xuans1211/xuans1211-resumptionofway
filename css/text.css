@@ -1,0 +1,25 @@
+.textbg{
+    position:fixed;
+    height: 100vh;
+    top:0px;
+}
+
+.textblock{
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    width: 70vw;
+    padding: 5vh 5vw;
+    bottom: 5vh;
+    left: 15vw;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    color: white;
+
+}

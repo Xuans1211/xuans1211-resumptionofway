@@ -41,39 +41,11 @@
 }
 
 #textadv{
-    height:500vh;
-    background-image: url(../assets/counter.jpg);
-    background-attachment: fixed; 
-    background-size: cover;
-    background-repeat: no-repeat;
+    height:1000vh;
+    background-color: gray;
     position: relative;
 }
 
-.txwrapper{
-    height:200vh;
-    /* background-color: aquamarine;opacity: 0.4; */
-    position: relative;
-}
-
-.txon{
-    height:200px;
-    width: 800px;
-    opacity: 0;
-    background-color: white;
-    position: absolute;
-    top:12vh;
-    left:10vh;
-}
-
-.txdown{
-    height:200px;
-    width: 800px;
-    opacity: 0;
-    background-color: white;
-    position: absolute;
-    bottom:12vh;
-    right:10vh;
-}
 
 #analytics{
     background-image: url(../assets/Figure3.png);
@@ -95,21 +67,7 @@
     position: relative;
 }
 
-h2{
-    font-weight: bold;
-    font-size: 30px;
-    position: absolute;
-    color: white;
 
-}
-
-.tx_normal{
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    width: 500px;
-}
 
 #footer{
     background-color: black;

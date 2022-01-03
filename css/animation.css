@@ -1,0 +1,7 @@
+.slideout {
+    visibility: hidden;
+}
+
+.slide {
+    visibility: visible;
+}
