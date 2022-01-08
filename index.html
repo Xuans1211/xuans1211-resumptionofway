@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/text.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <title>暫停鍵之後──顛跛的復學路</title>
+  <title>暫停、再播──顛跛的復學路</title>
 </head>
 
 <body>
@@ -26,22 +26,31 @@
   <div id="textadv">
     <div class="slideout textbg" data-an1="animate__animated animate__fadeIn"
       data-an2="animate__animated animate__fadeOut" data-pos1="100" data-pos2="1000">
-      <img src="assets/Figure1.png" style="height:100vh;width:100vw;">
+      <img src="assets/Figure1.png" style="height:100vh;width:auto;">
     </div>
 
     <div class="textblock slideout" data-an1="animate__animated animate__fadeInUp"
-      data-an2="animate__animated animate__fadeOutDown" data-pos1="500" data-pos2="700" style="z-index: 999;">
-      以臺大為例，復學生要按照一般申請宿舍流程，上住宿組網頁登記，例如第2學期住宿的是於 12月21至29日開放申請。
-      然而，復學生若晚於此時間方決定要復學，便會面臨申請不到宿舍的情況。
-  
-    
-    
+      data-an2="animate__animated animate__fadeOutDown" data-pos1="500" data-pos2="700" style="z-index: 9;">
+      我是以恩，高雄人，就讀臺大文學院。<br>在大二上因為課業、家庭等壓力而患上心理疾病，因此決定休學。
     </div>
 
+    <div class="textblock slideout" data-an1="animate__animated animate__fadeInUp"
+      data-an2="animate__animated animate__fadeOutDown" data-pos1="750" data-pos2="950" style="z-index: 9;">
+      在休學半年後我的身心狀況改善許多，現在學校註冊的日子也快到了，我正準備申請復學...
+    </div>
 
     <div class="slideout textbg" data-an1="animate__animated animate__fadeIn"
-      data-an2="animate__animated animate__fadeOut" data-pos1="1000" data-pos2="1900">
-      <img src="assets/Figure2.png" style="height:100vh;width:100vw;">
+      data-an2="animate__animated animate__fadeOut" data-pos1="1000" data-pos2="2000">
+      <img src="assets/scene2.jpg" style="height:100vh;width:100vw;">
+    </div>
+
+    <div class="slideout textbg" data-an1="animate__animated animate__fadeIn"
+      data-an2="animate__animated animate__fadeOut" data-pos1="1100" data-pos2="2000">
+      <div class="row" style="width: 100vw;padding: 0vw 25vw;">
+        <div class="card card1 col-9 col-md-5"></div>
+        <div class="col-8 col-md-2" style="height:10vh;"></div>
+        <div class="card card2 col-9 col-md-5">card3</div>
+      </div>
     </div>
 
   </div>
@@ -52,11 +61,11 @@
   <div id="footer">記者 | 傅書軒、楊佳臻、黃嘉晴
     <br>2021/12/30 報導
   </div>
-  <div id="navi">
+  <!-- <div id="navi">
     <a href="#textadv" class="nav_button" style="top:5vh;">故<br>事</a>
     <a href="#analytics" class="nav_button" style="top:30vh;">數<br>據</a>
     <a href="#solution" class="nav_button" style="top:55vh;">現<br>況</a>
-  </div>
+  </div> -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -78,12 +87,24 @@
           var parent_pos = $(this).parent().offset().top;
           var next_pos = parent_pos + $(this).parent().height();
           var parent_scrolled = scrolled - $(this).parent().offset().top;
+          console.log(parent_scrolled)
           if (parent_scrolled > $(this).data("pos1") && parent_scrolled < $(this).data("pos2")) {
+            $(this).removeClass("slideout" + $(this).data("an2"));
             $(this).addClass("animate__animated slide animated__" + $(this).data("an1"));
           };
-          if (parent_scrolled > $(this).data("pos2")) {
+
+          if (parent_scrolled >= $(this).data("pos2")) {
+            $(this).removeClass("slide" + $(this).data("an1"));
             $(this).addClass("slideout" + $(this).data("an2"));
           };
+
+          if (parent_scrolled <= $(this).data("pos1")) {
+            $(this).removeClass("slide" + $(this).data("an1"));
+            $(this).addClass("slideout" + $(this).data("an2"));
+          };
+
+
+
         });
 
       });
