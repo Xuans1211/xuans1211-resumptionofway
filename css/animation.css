@@ -1,0 +1,35 @@
+.slideout {
+    visibility: hidden;
+}
+
+.slide {
+    visibility: visible;
+}
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 0.3s;
+}
+
+.animate__animated.animate__fadeInUp {
+    --animate-duration: 0.5s;
+}
+
+.animate__animated.animate__fadeOut {
+    --animate-duration: 0.3s;
+}
+
+.animate__animated.animate__fadeOutDown {
+    --animate-duration: 0.5s;
+}
+
+
+.card:hover {
+    transform: scaleX(1.4);
+    transform-origin: left center;
+    transition: all 0.3s ease-in 0s;
+}
+.card2:hover {
+    transform: scaleX(1.4);
+    transform-origin: right center;
+    transition: all 0.3s ease-in 0s;
+}
