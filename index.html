@@ -13,24 +13,30 @@
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/text.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <title>暫停、再播──顛跛的復學路</title>
+  <title>暫停、續播──被校園遺忘的復學生</title>
 </head>
 
 <body>
   <div id="leadpage">
-    <h1>暫停、再播──顛跛的復學路</h1>
-    <p>被校園逐漸遺忘的一群人</p>
-    <button>123</button>
+    <img class="scrollable slideout" data-left=-10 data-left2=8 data-top=30 data-top2=130 src="assets/walk.gif"
+      style="position:absolute;width:80px;top:30%;left:-10%;z-index:2" data-pos1="0"
+      data-pos2="950" data-an2="animate__animated animate__fadeOut"
+      >
+    <div class="slideout" data-an1="animate__animated animate__fadeIn"
+      data-an2="animate__animated animate__fadeOut" data-pos1="955" data-pos2="1500" style="z-index: 9;font-family: 'genyo';font-size: 40px;position: fixed;top:40vh;left:30%">
+      暫停、續播──被校園遺忘的復學生
+    </div>
+
     <div class="textblock slideout" data-an1="animate__animated animate__fadeInUp"
-      data-an2="animate__animated animate__fadeOutDown" data-pos1="70" data-pos2="250" style="z-index: 9;">
-      以下故事基於六段真實訪談內容。
+      data-an2="animate__animated animate__fadeOutDown" data-pos1="1200" data-pos2="1500" style="z-index: 9;">
+      以下故事基於六段真實訪談內容改編。
     </div>
   </div>
 
   <div id="textadv">
     <div class="slideout textbg" data-an1="animate__animated animate__fadeIn"
-      data-an2="animate__animated animate__fadeOut" data-pos1="100" data-pos2="1000">
-      <img src="assets/Figure1.png" style="height:100vh;width:auto;">
+      data-an2="animate__animated animate__fadeOut" data-pos1="-650" data-pos2="1000">
+      <img src="assets/Figure1.png" style="height:150vh;width:calc(150vh*1.61);position:fixed;top:-30vh;left:-10vw">
     </div>
 
     <div class="textblock slideout" data-an1="animate__animated animate__fadeInUp"
@@ -40,13 +46,13 @@
 
     <div class="textblock slideout" data-an1="animate__animated animate__fadeInUp"
       data-an2="animate__animated animate__fadeOutDown" data-pos1="750" data-pos2="950" style="z-index: 9;">
-      在休學半年後，雖然還是要靠吃藥輔助，但我的身心狀況已經漸漸改善。<br>現在學校註冊的日子也快到了，為了能趕快重新接觸人群，我正準備申請復學...
+      在休學半年後，雖然還是要靠吃藥輔助，但我的身心狀況漸漸改善。<br>現在學校註冊的日子也快到了，為了能趕快重新接觸人群，我正準備申請復學...
     </div>
 
     <div id="choice">
       <div class="slideout textbg" data-an1="animate__animated animate__fadeIn"
         data-an2="animate__animated animate__fadeOut" data-pos1="1000" data-pos2="2000">
-        <img src="assets/scene2.jpg" style="height:100vh;width:100vw;">
+        <img src="assets/Laptop.png" style="height:140vh;width:calc(140vh*1.6);left: -20vw;">
       </div>
       <div class="slideout textbg" data-an1="animate__animated animate__fadeIn"
         data-an2="animate__animated animate__fadeOut" data-pos1="1100" data-pos2="1500">
@@ -55,8 +61,8 @@
             <div class="card card1"></div>
             <div class="cardtext">123</div>
           </div>
-          <div class="col-8 col-md-2" style="height:10vh;"></div>
-          <div class="col-9 col-md-5" style="position: relative;width: 25vw;">
+          <div class="col-10 col-md-2" style="height:10vh;"></div>
+          <div class="col-10 col-md-5" style="position: relative;width: 25vw;">
             <div class="card card2"></div>
             <div class="cardtext">123</div>
           </div>
@@ -64,12 +70,12 @@
       </div>
       <div class="textblock slideout" data-an1="animate__animated animate__fadeInUp"
         data-an2="animate__animated animate__fadeOutDown" data-pos1="1600" data-pos2="1800" style="z-index: 9;">
-        處理完租屋及選課的事情後，也迎來正式上課的日子。<br>但我後來才發現，事情沒有我想像中容易...
+        處理完租屋及選課的事情後，也迎來正式上課的日子。<br>但後來才發現，事情沒有我想像中容易...
       </div>
     </div>
     <div class="slideout textbg" data-an1="animate__animated animate__fadeIn"
       data-an2="animate__animated animate__fadeOut" data-pos1="2000" data-pos2="3400">
-      <img src="assets/classroom2.jpg" style="height:100vh;width:auto;">
+      <img src="assets/classroom2.jpg" style="height:150vh;width:calc(150vh*1.6)">
     </div>
     <div class="textblock slideout" data-an1="animate__animated animate__fadeInUp"
       data-an2="animate__animated animate__fadeOutDown" data-pos1="2100" data-pos2="2300" style="z-index: 9;">
@@ -143,13 +149,30 @@
             $(this).removeClass("slide" + $(this).data("an1"));
             $(this).addClass("slideout" + $(this).data("an2"));
           };
+        });
+        $(".scrollable").each(function () {
+          var parent_pos = $(this).parent().offset().top;
+          var next_pos = parent_pos + $(this).parent().height();
+          var parent_scrolled = scrolled - $(this).parent().offset().top;
+          if (parent_scrolled > 0 && scrolled < next_pos - (1.05 * winh)) {
 
-
-
+            if ($(this).attr("data-left")) {
+              $(this).css('left', (($(this).data('left2') - $(this).data(
+                'left')) * parent_scrolled / winh + $(this).data(
+                'left')) + '%');
+            }
+            if ($(this).attr("data-top")) {
+              $(this).css('top', (($(this).data('top2') - $(this).data('top')) *
+                parent_scrolled / winh + $(this).data('top')) + '%');
+            }
+          }
         });
 
       });
     })
+
+
+    
   </script>
 </body>
 
