@@ -24,10 +24,10 @@
 
 .card {
     height: 35vh;
-    background-color: aqua;
+    background-color: white;
     opacity: 0.8;
     z-index: 9;
-    top: 25vh;
+    top: 18vh;
 }
 
 .card1 {
@@ -37,10 +37,9 @@
 }
 .card2 {
     height: 35vh;
-    background-color: aqua;
     opacity: 0.8;
     z-index: 9;
-    top: 25vh;
+    top: 18vh;
     transform: scaleX(1);
     transform-origin: right center;
     transition: all 0.3s ease-in 0s;
