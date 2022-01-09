@@ -1,25 +1,47 @@
-.textbg{
-    position:fixed;
-    height: 100vh;
-    top:0px;
+@font-face {
+    font-family: "genyo";
+    src: url("NotoSansMonoCJKtc-Bold.otf");
 }
 
-.textblock{
+.textbg {
+    position: fixed;
+    height: 100vh;
+    top: 0px;
+}
+
+.textblock {
     background-color: white;
     color: black;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
     position: fixed;
     width: 70vw;
     padding: 5vh 5vw;
     bottom: 5vh;
     left: 15vw;
+    font-family: "genyo";
 }
 
-h2{
-    font-weight: bold;
-    font-size: 30px;
-    position: absolute;
-    color: white;
+.card {
+    height: 35vh;
+    background-color: aqua;
+    opacity: 0.8;
+    z-index: 9;
+    top: 25vh;
+}
 
+.card1 {
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition: all 0.3s ease-in 0s;
+}
+.card2 {
+    height: 35vh;
+    background-color: aqua;
+    opacity: 0.8;
+    z-index: 9;
+    top: 25vh;
+    transform: scaleX(1);
+    transform-origin: right center;
+    transition: all 0.3s ease-in 0s;
 }
