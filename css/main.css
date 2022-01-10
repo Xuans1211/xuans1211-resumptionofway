@@ -1,10 +1,10 @@
 #leadpage{
     height:370vh;
     background-attachment: fixed;
-    background-image: url(../assets/banner0.png);
+    background-image: url(../assets/door.png);
     background-repeat: no-repeat;
     background-size: calc(150vh*1.5) 150vh;
-    background-position: 20% 0%;
+    background-position: 20% 40%;
 }
 
 #navi{

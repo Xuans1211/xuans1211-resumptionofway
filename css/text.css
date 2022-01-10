@@ -23,26 +23,14 @@
 }
 
 .card {
-    height: 35vh;
+    height: 100px;
     background-color: white;
     opacity: 0.8;
     z-index: 9;
-    top: 18vh;
-}
-
-.card1 {
-    transform: scaleX(1);
-    transform-origin: left center;
-    transition: all 0.3s ease-in 0s;
-}
-.card2 {
-    height: 35vh;
-    opacity: 0.8;
-    z-index: 9;
-    top: 18vh;
-    transform: scaleX(1);
-    transform-origin: right center;
-    transition: all 0.3s ease-in 0s;
+    top: 10vh;
+    font-family: "genyo";
+    font-size: 2rem;
+    padding: 12%;
 }
 
 .analy_text{
@@ -52,8 +40,6 @@
     font-size: 1.2rem;
     width: 100vw;
     padding: 0 25vw;
-
-
 }
 
 

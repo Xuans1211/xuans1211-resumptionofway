@@ -21,15 +21,3 @@
 .animate__animated.animate__fadeOutDown {
     --animate-duration: 0.5s;
 }
-
-
-.card:hover {
-    transform: scaleX(1.4);
-    transform-origin: left center;
-    transition: all 0.3s ease-in 0s;
-}
-.card2:hover {
-    transform: scaleX(1.4);
-    transform-origin: right center;
-    transition: all 0.3s ease-in 0s;
-}
