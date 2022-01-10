@@ -51,7 +51,84 @@ h1{
     color: white;
 }
 
+h3 {
+    color: #69736d;
+    font-family: "genyo";
+    font-size: 1.5rem;
+    margin-block-start: 2em;
+  }
+
 .htx{
     color: gold;
     font-weight: bold;
 }
+
+.quote {
+    font-family: "KaiTi",serif;
+    font-size: 1.2rem;
+    margin:5vh 0;
+  }
+
+  p {
+    font-family: "Microsoft JhengHei";
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    /*
+      width: 100vw;
+      padding: 0 15vw;*/
+  }
+  p a {
+    color:#69736d;
+  }
+
+  ul {
+    margin: 0 auto;
+    width: 60vw;
+    display: block;
+  }
+  ul li {
+    text-align: center;
+    display:inline-block;
+    /*float: center;*/
+    line-height: 31px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: -1px;
+    border-left: none;
+    background: #e1e1e1;
+    border: 1px solid #bebebe;
+    margin-left: 2vw;
+  }
+  ul li a {
+    display: block;
+    padding: 8vh 3vw;
+    color: #69736d;
+    font-family: "genyo";
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  ul li a:hover {
+    background: #ccc;
+    color: #68746d;
+    text-decoration: none;
+  }
+  ul li.active {
+    background: #fff;
+  }
+  ul li.active a:hover {
+    background: #fff;
+    text-decoration: none;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .caption {
+    text-align:center;
+    margin-block-start: 0.5em;
+  }
