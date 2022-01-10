@@ -43,19 +43,20 @@
 }
 
 #textadv{
-    height:700vh;
+    height:750vh;
     background-color: black;
     position: relative;
 }
 
 
 #analytics{
-    background-image: url(../assets/Figure3.png);
+    /* background-image: url(../assets/Figure3.png);
     background-position:55%;
     background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 200vh;
+    background-repeat: no-repeat; */
+    background-color: black;
+    height: 400vh;
     position: relative;
 }
 

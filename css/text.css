@@ -45,9 +45,27 @@
     transition: all 0.3s ease-in 0s;
 }
 
+.analy_text{
+    position: absolute;
+    color: white;
+    font-family:'genyo';
+    font-size: 1.2rem;
+    width: 100vw;
+    padding: 0 25vw;
+
+
+}
+
+
 h1{
     font-family: "genyo";
     position: absolute;
     top:20vh;
     left:30vw;
+    color: white;
+}
+
+.htx{
+    color: gold;
+    font-weight: bold;
 }
