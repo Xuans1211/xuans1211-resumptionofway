@@ -50,23 +50,13 @@
 
 
 #analytics{
-    /* background-image: url(../assets/Figure3.png);
-    background-position:55%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat; 
-    background-color: black;
-    height: 400vh;*/
+
     position: relative;
+    
 }
 
 #solution{
-    /*background-image: url(../assets/Figure1.png);
-    background-position:60%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 200vh;*/
+
     position: relative;
 }
 

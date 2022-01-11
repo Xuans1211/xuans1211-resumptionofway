@@ -6,6 +6,14 @@
     visibility: visible;
 }
 
+.txhidden{
+    visibility: hidden;
+}
+
+.txvisible {
+    visibility: visible;
+}
+
 .animate__animated.animate__fadeIn {
     --animate-duration: 0.3s;
 }
